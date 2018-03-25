@@ -15,7 +15,7 @@ const appService = {
   },
   getFlavors () {
     return new Promise((resolve) => {
-      axios.get('/users/1/')
+      axios.get('/users/1/posts')
         .then(response => {
           resolve(response.data)
         })

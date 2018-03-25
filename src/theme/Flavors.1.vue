@@ -1,19 +1,19 @@
 <template>
   <div>
-    <h2>The Flavors</h2>
-    <div class="columns">
+    <h2>The Brands</h2>
+  </div>
+    /* <div class="columns">
     <div class="column is-one-third"
     v-for="(post, title) in posts"
     v-bind:key="post.id">
       <app-post>
         <h3 slot="title" v-html="post.title.rendered"></h3>
-        <span slot="body" v-html="post.body.rendered"></span>
+        <span slot="content" v-html="post.body.rendered"></span>
       </app-post>
     </div>
-  </div>
-  </div>
+  </div> */
 </template>
-<script>
+/* <script>
   import Post from './Post.vue'
   import appService from '../app.service.js'
   export default {
@@ -39,7 +39,7 @@
     },
     created () {
       this.loadPosts()
-      console.log(this.$route)
+      console.log(this.$route.query.page)
     }
   }
-</script> 
+</script> */

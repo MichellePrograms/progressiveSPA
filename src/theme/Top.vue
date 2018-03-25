@@ -3,14 +3,14 @@
     <div class="container">
       <router-link to="/main" exact>
         <img src="http://bit.ly/vue-img"
-          alt="Vue SPA" />
+          alt="Offline Progressive App" />
       </router-link>
       <router-link class="nav-item is-tab"
         to="/brands">Brands</router-link>
       <router-link class="nav-item is-tab"
         to="/flavors">Flavors</router-link>
       <router-link class="nav-item is-tab"
-        to="/login"></router-link>
+        to="/login">Login</router-link>
     </div>
   </nav>
 </template>

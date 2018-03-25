@@ -51,13 +51,35 @@ webpack: Compiled successfully.
 
 Free online photos api
 https://jsonplaceholder.typicode.com/
-{
-  "albumId": 1,
-  "id": 1,
-  "title": "accusamus beatae ad facilis cum similique qui sunt",
-  "url": "http://placehold.it/600/92c952",
-  "thumbnailUrl": "http://placehold.it/150/92c952"
-}
+
 
 https://jsonplaceholder.typicode.com/albums/1/photos
+{
+    "albumId": 1,
+    "id": 5,
+    "title": "natus nisi omnis corporis facere molestiae rerum in",
+    "url": "http://placehold.it/600/f66b97",
+    "thumbnailUrl": "http://placehold.it/150/f66b97"
+  },
+
+
 https://jsonplaceholder.typicode.com/users/1/posts
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  },
+
+
+check how the data is coming back
+the api above 
+
+
+using this example from the vuespa js course
+https://api.fullstackweekly.com//wp-json/wp/v2/posts?categories=1&per_page=1
+[{"id":520,"date":"2016-11-29T15:00:33","date_gmt":"2016-11-29T13:00:33","guid":{"rendered":"https:\/\/api.fullstackweekly.com\/?p=520"},"modified":"2017-02-28T17:01:14","modified_gmt":"2017-02-28T15:01:14","slug":"week-13-data-binding-objects","status":"publish","type":"post","link":"https:\/\/api.fullstackweekly.com\/week-13-data-binding-objects\/","title":{"rendered":"Week 13 | Data binding: Objects"},"content":{"rendered":"<p>Data binding in objects work a bit differently than single values. By default Polymer will create a setter for the whole object but not for its properties.<\/p>\n<h3>Case 1 &#8211; Updating the sub-property<\/h3>\n<pre class=\"brush: javascript; gutter: true\">properties: {\r\n          message: {\r\n            type: Object,\r\n            value: function() {\r\n              return {\r\n                text: &quot;You have completed this task successfully&quot;,\r\n                status: &quot;success&quot;\r\n              }\r\n            }\r\n          }\r\n        },\r\n        ready: function() {\r\n          this.message.text = &quot;Successfully Loaded&quot;; \/\/Step 1\r\n        }<\/pre>\n<p>In this case we have declared a\u00a0&#8220;message&#8221; object and once the element has loaded we change the text property to &#8220;Successfully Loaded&#8221;. In the template tag if we have the following binding<\/p>\n<pre class=\"brush: html; gutter: true\">&lt;div&gt;{{message.text}}&lt;\/div&gt;<\/pre>\n<p>You will see <strong>&#8220;You have completed this task successfully&#8221;<\/strong> although we changed it to <strong>&#8220;Successfully Loaded&#8221;<\/strong>. This occurs because Polymer was looking for changes at the &#8220;message&#8221; object as a whole but not in its subproperties.<!--more--><\/p>\n<h3>Case 2 &#8211; Updating the whole object<\/h3>\n<pre class=\"brush: javascript; gutter: true\">        properties: {\r\n          message: {\r\n            type: Object,\r\n            value: function() {\r\n              return {\r\n                text: &quot;You have completed this task successfully&quot;,\r\n                status: &quot;success&quot;\r\n              }\r\n            }\r\n          }\r\n        },\r\n        ready: function() {\r\n          this.message = { text: &quot;Successfully Loaded&quot;, status: &quot;success&quot; } \/\/Step 2\r\n        }<\/pre>\n<p>If we change the whole object instead of it property we would see the &#8220;Successfully Loaded&#8221; string since Polymer triggered the &#8220;changed&#8221; event and updated the &lt;div&gt;{{message.text}} section.<\/p>\n<h3>Case 3 &#8211;\u00a0Using the notifyPath<\/h3>\n<pre class=\"brush: javascript; gutter: true\">        properties: {\r\n          message: {\r\n            type: Object,\r\n            value: function() {\r\n              return {\r\n                text: &quot;You have completed this task successfully&quot;,\r\n                status: &quot;success&quot;\r\n              }\r\n            }\r\n          }\r\n        },\r\n        ready: function() {\r\n          this.message.text = &quot;Successfully Loaded&quot;;\r\n          this.notifyPath( &quot;message.text&quot; );\r\n        }\r\n<\/pre>\n<p>&nbsp;<\/p>\n<p>With the notify path Polymer will trigger the changed event and update manually the &lt;div&gt;{{message.text}}&lt;\/div&gt; area.<\/p>\n<h3>Case 4\u00a0&#8211;\u00a0Using the set method<\/h3>\n<pre class=\"brush: javascript; gutter: true\">        properties: {\r\n          message: {\r\n            type: Object,\r\n            value: function() {\r\n              return {\r\n                text: &quot;You have completed this task successfully&quot;,\r\n                status: &quot;success&quot;\r\n              }\r\n            }\r\n          }\r\n        },\r\n        ready: function() {\r\n          this.set( &quot;message.text&quot;, &quot;Successfully Loaded&quot; )\r\n        }<\/pre>\n<p>Instead of changing the method and running the notifyPath you can just run this.set() that will do both.<\/p>\n","protected":false},"excerpt":{"rendered":"<p>Data binding in objects work a bit differently than single values. By default Polymer will create a setter for the whole object but not for its properties. Case 1 &#8211; Updating the sub-property properties: { message: { type: Object, value: function() { return { text: &quot;You have completed this task successfully&quot;, status: &quot;success&quot; } } [&hellip;]<\/p>\n","protected":false},"author":1,"featured_media":0,"comment_status":"open","ping_status":"open","sticky":false,"template":"","format":"standard","meta":[],"categories":[1],"tags":[62],"better_featured_image":null,"pure_taxonomies":{"categories":[{"term_id":1,"name":"Uncategorized","slug":"uncategorized","term_group":0,"term_taxonomy_id":1,"taxonomy":"category","description":"","parent":0,"count":1,"filter":"raw","cat_ID":1,"category_count":1,"category_description":"","cat_name":"Uncategorized","category_nicename":"uncategorized","category_parent":0}],"tags":[{"term_id":62,"name":"polymer 1.0","slug":"polymer-1-0","term_group":0,"term_taxonomy_id":62,"taxonomy":"post_tag","description":"","parent":0,"count":29,"filter":"raw"}]},"rest_api_enabler":[],"_links":{"self":[{"href":"https:\/\/api.fullstackweekly.com\/wp-json\/wp\/v2\/posts\/520"}],"collection":[{"href":"https:\/\/api.fullstackweekly.com\/wp-json\/wp\/v2\/posts"}],"about":[{"href":"https:\/\/api.fullstackweekly.com\/wp-json\/wp\/v2\/types\/post"}],"author":[{"embeddable":true,"href":"https:\/\/api.fullstackweekly.com\/wp-json\/wp\/v2\/users\/1"}],"replies":[{"embeddable":true,"href":"https:\/\/api.fullstackweekly.com\/wp-json\/wp\/v2\/comments?post=520"}],"version-history":[{"href":"https:\/\/api.fullstackweekly.com\/wp-json\/wp\/v2\/posts\/520\/revisions"}],"wp:attachment":[{"href":"https:\/\/api.fullstackweekly.com\/wp-json\/wp\/v2\/media?parent=520"}],"wp:term":[{"taxonomy":"category","embeddable":true,"href":"https:\/\/api.fullstackweekly.com\/wp-json\/wp\/v2\/categories?post=520"},{"taxonomy":"post_tag","embeddable":true,"href":"https:\/\/api.fullstackweekly.com\/wp-json\/wp\/v2\/tags?post=520"}],"curies":[{"name":"wp","href":"https:\/\/api.w.org\/{rel}","templated":true}]}}]
+
+watching the js calls get made, the component is getting loaded before the data is filled in from the api call
+how to stop render until the component has data/refresh on data received
+

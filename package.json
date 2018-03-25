@@ -1,11 +1,11 @@
 {
-  "name": "vuespa02",
+  "name": "pgspa1",
   "version": "1.0.0",
   "description": "mpeterson",
   "main": "server.js",
   "dependencies": {
     "axios": "^0.16.2",
-    "bulma": "^0.5.1",
+    "bulma": "^0.5.3",
     "express": "^4.15.4",
     "vue": "^2.4.2",
     "vue-router": "^2.7.0"
