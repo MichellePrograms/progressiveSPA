@@ -48,3 +48,16 @@ assets/js/app.js  348 kB       0  [emitted]  [big]  app
     + 9 hidden modules
 webpack: Compiled successfully.
 
+
+Free online photos api
+https://jsonplaceholder.typicode.com/
+{
+  "albumId": 1,
+  "id": 1,
+  "title": "accusamus beatae ad facilis cum similique qui sunt",
+  "url": "http://placehold.it/600/92c952",
+  "thumbnailUrl": "http://placehold.it/150/92c952"
+}
+
+https://jsonplaceholder.typicode.com/albums/1/photos
+https://jsonplaceholder.typicode.com/users/1/posts
