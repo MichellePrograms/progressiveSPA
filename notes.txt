@@ -83,3 +83,14 @@ https://api.fullstackweekly.com//wp-json/wp/v2/posts?categories=1&per_page=1
 watching the js calls get made, the component is getting loaded before the data is filled in from the api call
 how to stop render until the component has data/refresh on data received
 
+
+Design consideration is to fetch before navigation or after navigation
+https://router.vuejs.org/en/advanced/data-fetching.html
+before navigation
+ perform the data fetching in the beforeRouteEnter guard in the incoming component, 
+ and only call next when the fetch is complete
+after navigation
+show a loading and track the created hook
+
+
+

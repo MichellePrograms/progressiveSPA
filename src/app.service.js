@@ -7,7 +7,7 @@ axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com'
 const appService = {
   getBrands () {
     return new Promise((resolve) => {
-      axios.get('/albums/1/')
+      axios.get('/albums/1/', {responseType: 'json'})
         .then(response => {
           resolve(response.data)
         })
@@ -15,8 +15,9 @@ const appService = {
   },
   getFlavors () {
     return new Promise((resolve) => {
-      axios.get('/users/1/posts')
-        .then(response => {
+      axios.get('/users/1/posts', {responseType: 'json'})
+        .then((response) => {
+          console.log(response.data)
           resolve(response.data)
         })
     })

@@ -1,16 +1,16 @@
 <template>
-  <div>
-    <h2>The Flavors</h2>
     <div class="columns">
+    <div class="loading" v-if="loading">
+      <p>Loading Flavors..... </p>
+    </div>
     <div class="column is-one-third"
     v-for="(post, title) in posts"
     v-bind:key="post.id">
       <app-post>
-        <h3 slot="title" v-html="post.title.rendered"></h3>
-        <span slot="body" v-html="post.body.rendered"></span>
+        <h3 slot="title" v-html="post.title"></h3>
+        <span slot="body" v-html="post.body"></span>
       </app-post>
     </div>
-  </div>
   </div>
 </template>
 <script>
@@ -22,24 +22,29 @@
     },
     data () {
       return {
-        posts: []
+        loading: false,
+        posts: null,
+        error: null
       }
     },
     methods: {
       loadPosts () {
+        this.posts = null
+        this.loading = true
         appService.getFlavors().then(data => {
           this.posts = data
+          this.loading = false
         })
       }
     },
     watch: {
-      '$route' (to, from) {
-        this.loadPosts()
-      }
+      '$route' : 'loadPosts'
     },
     created () {
+      // fetch the data when the view is created and the data is
+      // already being observed
       this.loadPosts()
       console.log(this.$route)
     }
   }
-</script> 
+</script>
