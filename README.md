@@ -1,1 +1,5 @@
 # progressiveSPA
+
+ git config user.email "you@example.com"
+ git config user.name "Your Name"
+

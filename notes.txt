@@ -1,0 +1,50 @@
+# progressiveSPA
+
+## using Building ofline web apps w service worker, plrlsite, nic molnar
+---C:\Users\Mine\Training\Pluralsight\offlineSvcWkr
+
+Getting some stuff setup to try out with the SodaPopped example from nic
+https://sodapopped.com/
+https://github.com/nikmd23?tab=repositories
+https://nikcodes.com/
+
+
+
+read this too:
+https://wilsonmar.github.io/progressive-webapps/
+
+
+using git bash command line
+cd /C/Users/Mine/source/pluralSite/progressiveSPA (work1)
+npm install
+
+ npm start
+
+> vuespa02@1.0.0 start C:\Users\Mine\source\pluralSite\progressiveSPA
+> node server.js
+
+server started at http://localhost:3000
+webpack built feb5bde8af166ad9f416 in 1753ms
+Hash: feb5bde8af166ad9f416
+Version: webpack 3.11.0
+Time: 1753ms
+           Asset    Size  Chunks                    Chunk Names
+assets/js/app.js  348 kB       0  [emitted]  [big]  app
+   [2] ./node_modules/vue/dist/vue.runtime.esm.js 212 kB {0} [built]
+   [4] ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/theme/Layout.vue 85 bytes {0} [built]
+   [6] multi webpack-hot-middleware/client ./src/client-entry.js 40 bytes {0} [built]
+   [7] (webpack)-hot-middleware/client.js 7.35 kB {0} [built]
+   [8] (webpack)/buildin/module.js 517 bytes {0} [built]
+   [9] ./node_modules/strip-ansi/index.js 161 bytes {0} [built]
+  [10] ./node_modules/ansi-regex/index.js 135 bytes {0} [built]
+  [11] (webpack)-hot-middleware/client-overlay.js 2.21 kB {0} [built]
+  [12] ./node_modules/ansi-html/index.js 4.26 kB {0} [built]
+  [13] ./node_modules/html-entities/index.js 231 bytes {0} [built]
+  [14] ./node_modules/html-entities/lib/xml-entities.js 2.99 kB {0} [built]
+  [16] (webpack)-hot-middleware/process-update.js 4.33 kB {0} [built]
+  [17] ./src/client-entry.js 157 bytes {0} [built]
+  [18] ./src/app.js 739 bytes {0} [built]
+  [21] ./src/theme/Layout.vue 1.51 kB {0} [built]
+    + 9 hidden modules
+webpack: Compiled successfully.
+
