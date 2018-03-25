@@ -1,9 +1,5 @@
 const path = require('path')
 
-//  webpack will make all the distribution code needed
-// by taking js files adding pollyfil etc and gening up
-// what is needed by browser
-
 const config = {
   entry: {
     app: path.resolve(__dirname, '../src/client-entry.js')
