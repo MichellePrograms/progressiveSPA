@@ -3,6 +3,9 @@
 ## using Building ofline web apps w service worker, plrlsite, nic molnar
 ---C:\Users\Mine\Training\Pluralsight\offlineSvcWkr
 
+using some stuff build in the vuespa05 session
+---C:\Users\Mine\source\pluralSite\vuespa05
+
 Getting some stuff setup to try out with the SodaPopped example from nic
 https://sodapopped.com/
 https://github.com/nikmd23?tab=repositories
@@ -92,5 +95,7 @@ before navigation
 after navigation
 show a loading and track the created hook
 
+
+https://vuejs.org/v2/guide/syntax.html
 
 

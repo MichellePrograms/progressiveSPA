@@ -23,8 +23,7 @@
     data () {
       return {
         loading: false,
-        posts: null,
-        error: null
+        posts: null
       }
     },
     methods: {

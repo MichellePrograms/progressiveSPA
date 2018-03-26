@@ -2,17 +2,17 @@
     <div class="card">
     <div class="card-content">
       <slot name="title"></slot>
-      <slot name="url"></slot>
+      <slot name="thumbnailUrl"></slot>
     </div>
     <footer class="card-footer">
-      <a class="card-footer-item" :href="thumbnailUrl"
-      target="_blank">Read More</a>
+      <a class="card-footer-item" :href="url"
+      target="_blank">View Picture</a>
     </footer>
   </div>
 </template>
 <script>
   export default {
-    props: ['thumbnailUrl']
+    props: ['url']
   }
 </script>
 <style scoped>
